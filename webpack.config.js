@@ -1,6 +1,9 @@
-
+var webpack = require('webpack');
 module.exports = {
-  entry:  './app/app.js',
+  entry:  {
+    app : './app/app.js',
+    lib : ['react','react-dom']
+  },
   output: {
       path:     './build',
       filename: 'app.min.js',
@@ -13,5 +16,8 @@ module.exports = {
           exclude: 'node_modules'
       }
     ],
-    }
+  },
+  plugins: [
+    new  webpack.optimize.CommonsChunkPlugin('lib.min.js', ['lib'])
+  ]
 };

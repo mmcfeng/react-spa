@@ -4,7 +4,8 @@
   "description": "react webpack node",
   "main": "app.js",
   "scripts": {
-    "test": "npm run test"
+    "build": " webpack --progress --colors",
+    "start": "webpack-dev-server --progress --colors"
   },
   "author": "mmcfeng",
   "license": "ISC",
