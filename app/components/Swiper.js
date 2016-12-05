@@ -1,16 +1,14 @@
-import React from 'react';
+import React,{Component} from 'react'
 
-export default class Swiper extends React.Component{
-	constructor(props){
-		super(props);
-	}
+export default class Swiper extends Component{
+	constructor(props) {
+    super(props);
+    console.log('exampleComponent mounted');
+  }
 
-	componentDidMount(){
-		debugger;
-		console.log('ddddddddddddddddddddddd');
-		$.init();
-		$(".swiper-container").swiper();
-	}
+  componentDidMount() {
+       console.log('exampleComponent mounted');
+  }
 	render(){
 		return (
 			<section className="component content">

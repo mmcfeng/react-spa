@@ -1,6 +1,6 @@
-import React from 'react';
+import React,{Component} from 'react'
 import Toolbar from '../components/Toolbar';
-class Home extends React.Component{
+class Home extends Component{
 	constructor(props){
 		super(props)
 	}

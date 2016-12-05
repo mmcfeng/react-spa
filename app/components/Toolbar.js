@@ -1,7 +1,7 @@
-import React from 'react';
+import React,{Component} from 'react'
 import {Link} from 'react-router';
 
-class Toolbar extends React.Component{
+class Toolbar extends Component{
 
 	constructor(props){
 		super(props);
