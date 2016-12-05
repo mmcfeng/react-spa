@@ -6,12 +6,15 @@ export default class ShopList extends Component{
 	constructor(props){
 		super(props);
 	}
+	getInitialState(){
+		debugger;
+	}
 	componentDidMount(){
 		debugger;
 	}
 	render(){
 		return (
-			<section className="page">
+			<section className="">
 				<Swiper />
 				<Toolbar />
 			</section>

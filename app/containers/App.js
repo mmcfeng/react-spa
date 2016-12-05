@@ -6,12 +6,13 @@ class App extends Component{
 		super(props)
 	}
 	componentDidMount(){
+		debugger;
 		$.init();
 		debugger;
 	}
 	render(){
 		return (
-			<section>
+			<section className="page">
 				{this.props.children}
 			</section>
 		)
