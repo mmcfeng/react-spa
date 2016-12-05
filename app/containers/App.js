@@ -1,4 +1,5 @@
 import React from 'react';
+import Toolbar from '../components/Toolbar'
 
 class App extends React.Component{
 	constructor(props){
@@ -6,10 +7,10 @@ class App extends React.Component{
 	}
 
 	render(){
-		console.log('1111');
 		return (
 			<section>
 				<p>main page</p>
+				<Toolbar />
 			</section>
 		)
 	}
