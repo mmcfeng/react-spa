@@ -24,7 +24,7 @@ class Toolbar extends Component{
 			    <span className="tab-label">圈子</span>
 			  </Link>
 			  <Link className="tab-item external" to={`/shoplist`}>
-			    <span className="icon icon-cart"></span>
+			    <span className="icon icon-user"></span>
 			    <span className="tab-label">我的</span>
 			  </Link>
 			</nav>	

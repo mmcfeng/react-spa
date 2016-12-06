@@ -2,9 +2,18 @@ import express from 'express';
 import React from 'react';
 import { renderToString } from 'react-dom/server';
 import { match, RouterContext } from 'react-router';
+//  webpack热编译
+import webpack from 'webpack';
+import webpackDevMiddleware from 'webpack-dev-middleware';
+import webpackHotMiddleware from 'webpack-hot-middleware';
+import webpackConfig from '../webpack.config.js';
 import routers from '../app/routers';
 
 const app = express();
+
+const compiler = webpack(webpackConfig);
+app.use(webpackDevMiddleware(compiler, { publicPath: webpackConfig.output.publicPath}));
+app.use(webpackHotMiddleware(compiler));
 
 app.use(express.static(__dirname + './../build'));
 

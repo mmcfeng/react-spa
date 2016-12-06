@@ -1,4 +1,5 @@
 import React,{Component} from 'react'
+import BackHeader from '../components/BackHeader';
 import Toolbar from '../components/Toolbar';
 class Home extends Component{
 	constructor(props){
@@ -8,7 +9,8 @@ class Home extends Component{
 	render(){
 		return (
 			<section>
-				<p>main page</p>
+				<BackHeader />
+				<p></p>
 				<Toolbar />
 			</section>
 		)

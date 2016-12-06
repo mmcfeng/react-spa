@@ -5,11 +5,7 @@ class App extends Component{
 	constructor(props){
 		super(props)
 	}
-	componentDidMount(){
-		debugger;
-		$.init();
-		debugger;
-	}
+	
 	render(){
 		return (
 			<section className="page">
