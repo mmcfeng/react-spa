@@ -1,0 +1,15 @@
+CACHE MANIFEST
+# v = 20161209
+CACHE:
+	# 离线缓存sui资源
+	//g.alicdn.com/sj/lib/zepto/zepto.min.js
+	//g.alicdn.com/msui/sm/0.6.2/css/sm.min.css
+	//g.alicdn.com/msui/sm/0.6.2/css/sm-extend.min.css
+	//g.alicdn.com/msui/sm/0.6.2/js/sm.min.js
+	//g.alicdn.com/msui/sm/0.6.2/js/sm-extend.min.js
+
+	# 缓存公共（React、React-router等）资源库
+	./lib.min.js
+NETWORK:
+	*
+FALLBACK:

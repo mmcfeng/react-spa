@@ -1,5 +1,6 @@
 import express from 'express';
 import React from 'react';
+import cookieParser from 'cookie-parser';
 import { renderToString } from 'react-dom/server';
 import { match, RouterContext } from 'react-router';
 //  webpack热编译
@@ -16,7 +17,8 @@ app.use(webpackDevMiddleware(compiler, { publicPath: webpackConfig.output.public
 app.use(webpackHotMiddleware(compiler));
 
 app.use(express.static(__dirname + './../build'));
-
+app.use(express.static(__dirname + './../statics'));
+app.use(cookieParser())
 app.set('views', __dirname + './../views');
 app.set('view engine', 'ejs');
 
@@ -32,6 +34,7 @@ app.get('*', (req, res) => {
       // You can also check renderProps.components or renderProps.routes for
       // your "not found" component or route respectively, and send a 404 as
       // below, if you're using a catch-all route.
+      const {version} = req.cookies;
       const markup = renderToString(<RouterContext {...renderProps} />);
       res.status(200).render('index', {markup});
     } else {
